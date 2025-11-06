@@ -1,0 +1,5 @@
+nombre = input("ingresa tu nombre: ")
+edad = input("ingresa tu edad: ")
+hacefrio = input("hace frio hoy? (si/no): ")
+altura = float(input("ingresa tu altura en metros: "))  
+print(type (nombre), type (edad), type (hacefrio), type (altura))
