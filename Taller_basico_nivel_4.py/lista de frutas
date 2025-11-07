@@ -1,0 +1,4 @@
+frutas =[]
+
+frutas.append(input("ingrese una fruta: "))
+print(frutas)
