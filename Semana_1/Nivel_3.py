@@ -1,7 +1,9 @@
+# Ejercicio 13.
 # Contar del 1 al 10.
 for i in range(10):
     print(i + 1)
 
+# Ejercicio 14.
 # Sumatoria del 1 al n.
 while True:
     try:
@@ -16,6 +18,7 @@ while True:
 total = final * (final + 1) // 2
 print(f"La suma de 1 a {final} es: {total}")
 
+# Ejercicio 15.
 # Tabla de multiplicar.
 hasta = 10
 while True:
@@ -29,11 +32,13 @@ print(f"\nTabla de multiplicar del {multi} (hasta {hasta}):")
 for i in range(1, hasta + 1):
     print(f"{multi} x {i} = {multi * i}")
 
+# Ejercicio 16.
 # Contador regresivo con while.
 reg = int(input("\n¿Hasta que número quiere que se haga la regresión?: "))
 for i in range(reg, 0, -1):
     print(f"- {i}")
 
+# Ejercicio 17.
 # Adivina el número (usar random).
 import random
 
@@ -61,6 +66,7 @@ for i in range(intentos):
 if adivina != numero_secreto:
     print(f"\nNo adivinaste. El número secreto era {numero_secreto}.")
 
+# Ejercicio 18.
 # Sumar hasta que el usuario escriba 0.
 sumador = 0
 bandera = True

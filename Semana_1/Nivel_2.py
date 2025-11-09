@@ -1,3 +1,4 @@
+# Ejercicio 7.
 # Mayor de edad.
 age = int(input("\n¿Cuantos años tienes?: "))
 if age >= 18:
@@ -5,6 +6,7 @@ if age >= 18:
 else:
     print("Eres menor de edad.")
 
+# Ejercicio 8.
 # Número positivo, negativo o cero.
 num = int(input("\nIngresa un número: "))
 if num == 0:
@@ -14,6 +16,7 @@ elif num > 0:
 else:
     print("Tu numero es negativo")
 
+# Ejercicio 9.
 # Par o impar.
 num = int(input("\nIngresa un número: "))
 if num % 2 == 0:
@@ -21,6 +24,7 @@ if num % 2 == 0:
 else:
     print("Tu numero es impar")
 
+# Ejercicio 10.
 # Calculadora básica con +, -, *, /.
 while True:
 
@@ -62,6 +66,7 @@ while True:
         print("\nOpción invalida")
     print("=" * 50)
 
+# Ejercicio 11.
 # Clasificador de notas (Excelente, Aprobado, Reprobado).
 while True:
     try:
@@ -78,6 +83,7 @@ while True:
     except ValueError:
         print("Solo se permiten números decimales (por ejemplo: 3.5). Intenta de nuevo.")
 
+# Ejercicio 12.
 # Mayor y menor de 3 números
 print()
 lista = []

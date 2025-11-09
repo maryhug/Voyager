@@ -1,5 +1,10 @@
+# Ejercicio 19.
 # Lista de frutas.
+
+# Ejercicio 20.
 # Agregar y eliminar frutas.
+
+# Ejercicio 21.
 # Buscar un elemento en la lista.
 frutas = []
 
@@ -71,6 +76,7 @@ while op != 5:
     else:
         print('Ingrese una opción valida')
 
+# Ejercicio 22.
 # Lista de números y promedio.
 lista = []
 total = 0
@@ -90,7 +96,9 @@ promedio = total / num
 print(f"\nLa suma de estos números {lista} es: {total}"
       f"\nPor lo tanto su promedio es: {promedio}")
 
+# Ejercicio 23.
 # Números pares: guardar solo los pares.
+# Ejercicio 24.
 # Eliminar duplicados.
 print()
 pares = []
