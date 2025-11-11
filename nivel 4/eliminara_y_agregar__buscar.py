@@ -1,38 +1,64 @@
 # 20 y 21, agregar y eliminar, buscar posicion en lista.
+# Lista que contendrá los jugadores del equipo
 equipo = []
-while repeti == True:
-        print("  CREA TU PROPIO EQUIPO, DE NBA. ")
-        print(" 1. agregar jugardor. ")
-        print(" 2. eliminar jugador. ")
-        print(" 3. ver planilla del equipo. ")
-        print(" 4. ver posicion en la que esta el jugador.")
-        print(" 5. salir del menu. ")
-        try:
-            draf = int(input(" ¿ Que haras ?. "))
-            if draf == 1:
-                print(".selecion de jugador. ")
-                jugador = input("¿Que jugador deceas agragar?. ")
-                equipo.append(jugador)
-                print(f"Se agreago, el jugador {jugador}, a la planilla del equipo. ")
-            elif draf == 2:
-                print(".ELIMINACION DE JUGADOR. ")
-                eliminado = input("¿con cual jugador, vas a cancelar contrato?. ")
-                equipo.remove(eliminado)
-                print(f"Se cancelo el contarrato, con el jugador, {eliminado}. Retirado de la planilla.")
-            elif draf == 3: 
-                print(".MOSTRANDO PLANILLA DE JUGADORES. ")
-                print(equipo)
-            elif draf == 4:
-                print(".POSICION DE JUGADOR EN LA PLANILLA. ")  
-                unidad = input("¿De que jugador, deceas saber su posicion en la planilla?. ")   
-                posicion = equipo.index(unidad.lower())
-                print(f"El jugador {unidad}, esta en la posicion {posicion + 1} de la planilla del equipo. ")
-                
-            elif draf == 5:
-                repeti = False
-                print("Saliendo del menu, hasta luego. ")
-            else:
-                print("MMMMEEEEEEHHHHHH........")
 
-        except ValueError:
-            print("mmmmeeeehhh....")
+# Variable de control del bucle principal
+repeti = True
+
+while repeti:
+    # Menú principal
+    print("  CREA TU PROPIO EQUIPO, DE NBA. ")
+    print(" 1. agregar jugador. ")
+    print(" 2. eliminar jugador. ")
+    print(" 3. ver planilla del equipo. ")
+    print(" 4. ver posición en la que está el jugador.")
+    print(" 5. salir del menú. ")
+
+    try:
+        # Solicita al usuario qué acción desea realizar
+        draf = int(input(" ¿Qué harás? "))
+
+        # Opción 1: agregar jugador
+        if draf == 1:
+            print(".selección de jugador. ")
+            jugador = input("¿Qué jugador deseas agregar? ")
+            equipo.append(jugador)
+            print(f"Se agregó el jugador {jugador} a la planilla del equipo. ")
+
+        # Opción 2: eliminar jugador
+        elif draf == 2:
+            print(".ELIMINACIÓN DE JUGADOR. ")
+            eliminado = input("¿Con cuál jugador vas a cancelar contrato? ")
+            if eliminado in equipo:
+                equipo.remove(eliminado)
+                print(f"Se canceló el contrato con el jugador {eliminado}. Retirado de la planilla.")
+            else:
+                print(f"El jugador {eliminado} no está en la planilla.")
+
+        # Opción 3: mostrar planilla
+        elif draf == 3: 
+            print(".MOSTRANDO PLANILLA DE JUGADORES. ")
+            print(equipo)
+
+        # Opción 4: ver posición de un jugador
+        elif draf == 4:
+            print(".POSICIÓN DE JUGADOR EN LA PLANILLA. ")  
+            unidad = input("¿De qué jugador deseas saber su posición en la planilla? ")
+            if unidad in equipo:
+                posicion = equipo.index(unidad)
+                print(f"El jugador {unidad} está en la posición {posicion + 1} de la planilla del equipo.")
+            else:
+                print(f"El jugador {unidad} no se encuentra en la planilla.")
+
+        # Opción 5: salir del menú
+        elif draf == 5:
+            repeti = False
+            print("Saliendo del menú, hasta luego. ")
+
+        # Opción inválida
+        else:
+            print("MMMMEEEEEEHHHHHH........")
+
+    # Captura errores si el usuario ingresa algo que no sea número
+    except ValueError:
+        print("mmmmeeeehhh....")

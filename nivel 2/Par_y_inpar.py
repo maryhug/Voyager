@@ -1,7 +1,8 @@
-# 9 Par o impar.
-
-for i in range (0, 100):
+# 9 Par o  inpar.
+# 0 al 99, pares e impares
+# Se recorre del 0 al 99 y se imprime si el número es par o impar
+for i in range(0, 100):
     if i % 2 == 0:
-        print(F"par {i}. ")
+        print(f"Par {i}")
     else:
-        print(F"inpar {i}. ")
+        print(f"Impar {i}")

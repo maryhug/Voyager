@@ -1,10 +1,10 @@
 # 8 Número positivo, negativo o cero.
 
-numero = int(input("dime un numero. "))
+# Se pide un número y se determina si es positivo, negativo o cero
+numero = int(input("Dime un número: "))
 if numero > 0:
-    print("positivo, para covid.")
+    print("Positivo, para covid.")
 elif numero < 0:
-    print("negativo.")
+    print("Negativo.")
 else:
-    print("cero")
-
+    print("Cero")

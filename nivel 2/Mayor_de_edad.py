@@ -1,7 +1,7 @@
 # 7 Mayor de edad.
-
-edad = int(input("¿cuantos años tienes?. "))
+# Se pide la edad del usuario y se determina si es mayor de edad
+edad = int(input("¿Cuántos años tienes? "))
 if edad >= 18:
-    print(" ya estas muy viejo.")
+    print("Ya estás muy viejo.")
 else:
-    print("eres un sol")
+    print("Eres un sol")

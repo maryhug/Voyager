@@ -1,7 +1,7 @@
 # 16 Contador regresivo
 
-n = int(input("Hi, Dios te bendiga, desde que nuemro deceas el contador regresibo. "))
+# Se pide el número inicial del que se quiere empezar a contar regresivamente
+n = int(input("Hi, Dios te bendiga, desde qué número deseas el contador regresivo. "))
 while n >= 0:
-    print(n)
-    n -= 1 
-
+    print(n)  # Se muestra el número actual
+    n -= 1  # Se decrementa en 1

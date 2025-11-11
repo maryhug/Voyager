@@ -39,7 +39,7 @@ def mostrar():
 
 # MENÚ PRINCIPAL
 while True:
-    print("\nBienvenido a la escuela de mi compa")
+    print("\nBienvenido a la escuela de mi compaaa")
     print("1. Agregar estudiante")
     print("2. Eliminar estudiante")
     print("3. Mostrar estudiantes")
