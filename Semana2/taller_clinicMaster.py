@@ -22,7 +22,7 @@ lista.append(paciente3)
 #Función para buscar los pacientes
 def buscar_pacientes():
 
-    #Bucle que se repita hasta que el usuario decida buscar más pacientes o ingrese un 4
+    #Bucle que se repita hasta que el usuario decida no buscar más pacientes o ingrese un 4
     while True:
         print("\nBÚSQUEDA DE PACIENTES")
         print("\n1. Buscar por Nombre (parcial o completo)")
