@@ -30,8 +30,8 @@ def pedir_texto(pregunta):
 
 def pedir_genero():
     while True:
-        genero = input("¿Es Masculino o Femenino? ").strip().capitalize()
-        if genero in ("masculino", "femenino", "fem", "mas", "f", "m"):
+        genero = input("¿Es Masculino o Femenino? ").strip().lower()
+        if genero in ("masculino", "femenino"):
             return genero.capitalize()
         else:
             print("Debes escribir 'masculino' - 'femenino'")
