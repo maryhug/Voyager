@@ -36,9 +36,8 @@ def pedir_genero():
         else:
             print("Debes escribir 'masculino' - 'femenino'")
 
-
 def pedir_texto_largo(pregunta):
-    caracteres = re.compile(r"^[A-Za-zÁÉÍÓÚáéíóúÑñ\s\.\'\-]+$")
+    caracteres = re.compile(r"^[0-9A-Za-zÁÉÍÓÚáéíóúÑñ\s\.\'\-]+$")
     while True:
         mucho_texto = input(pregunta).strip()
         if mucho_texto == "":
@@ -51,8 +50,8 @@ def pedir_texto_largo(pregunta):
             print("Ingresa un texto válido.")
 
 def ingresar_paciente():
-    ID = int(str(uuid.uuid4().int)[:10])  # Genera un ID de diez números.
-    nombre_completo = pedir_texto("Ingresa el nombre completo del paciente: ").capitalize()
+    ID = int(str(uuid.uuid4().int)[:3])  # Genera un ID de diez números.
+    nombre_completo = pedir_texto("Ingresa el nombre completo del paciente: ").title()
     genero = pedir_genero()
     diagnostico = pedir_texto_largo("¿Cuál es el diagnóstico del paciente?: ").capitalize()
     historial = pedir_texto_largo("¿Cuál es el historial del paciente?: ").capitalize()

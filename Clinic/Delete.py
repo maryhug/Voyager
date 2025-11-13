@@ -9,7 +9,7 @@ def imprimir_paciente(p):
     print(f"Género: {p.get('Genero')}")
     print(f"Diagnóstico: {p.get('Diagnostico')}")
     print(f"Historial: {p.get('Historial')}")
-    print(f"Edad: {p.get('Edad') or p.get('edad')}")
+    print(f"Edad: {p.get('Edad')}")
     print("-" * 40)
 
 # Elimina el paciente cuya clave "ID" coincida con id_buscar.

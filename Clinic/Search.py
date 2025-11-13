@@ -143,6 +143,8 @@ def buscar_diagnostico():
 
 # Función para mostrar los datos del paciente
 def mostrar_datos_paciente(paciente):
-    print(f"Nombre: {paciente['Nombre_completo']}")
     print(f"ID: {paciente['ID']}")
+    print(f"Nombre: {paciente['Nombre_completo']}")
+    print(f"Edad: {paciente['Edad']}")
     print(f"Diagnóstico: {paciente['Diagnostico']}")
+    print(f"Historial: {paciente['Historial']}")
