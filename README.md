@@ -1,1 +1,0 @@
-# 🚀 Voyager - Célula de Desarrollo
