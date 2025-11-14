@@ -10,8 +10,7 @@ from Clinic.Report import (
 )
 
 def menu():
-    print()
-    print("\n=== MENU ===")
+    print("=== MENU ===")
     print("1. Registrar pacientes")
     print("2. Buscar pacientes")
     print("3. Listar pacientes")
@@ -25,31 +24,40 @@ def main():
         menu()
         opcion = input("Escribe una opción: ").strip()
         if opcion == "1":
-            ingresar_paciente()
-            pregunta = input("Deseas ingresar otro paciente? (si - no) : ").capitalize()
-            if pregunta == "si".capitalize():
+            while True:
                 ingresar_paciente()
+                print()
+                pregunta = input("Deseas ingresar otro paciente? (si - no) : ").strip().lower()
+                if pregunta not in ("si", "s"):
+                    break
         elif opcion == "2":
             buscar_pacientes()
+            print()
         elif opcion == "3":
             reporte_todos_los_pacientes(pacientes)
+            print()
         elif opcion == "4":
             actualizar_paciente(pacientes)
+            print()
         elif opcion == "5":
             eliminado = eliminar_paciente_por_id(pacientes, input("ID a eliminar: "))
             if eliminado:
                 print("\nPaciente eliminado (datos):")
                 imprimir_paciente(eliminado)
+            print()
         elif opcion == "6":
             reporte_todos_los_pacientes(pacientes)
             reporte_pacientes_mayores_de_60(pacientes)
             reporte_diagnosticos_frecuentes(pacientes)
             reporte_cantidad_total(pacientes)
+            print()
         elif opcion == "7":
             print("Saliendo de la aplicación!!")
             break
         else:
+            print()
             print("La opción no es válida")
+            print()
 
 if __name__ == "__main__":
     main()

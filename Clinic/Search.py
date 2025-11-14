@@ -4,8 +4,8 @@ from Clinic.Add import pacientes
 def buscar_pacientes():
     # Bucle que se repita hasta que el usuario decida buscar más pacientes o ingrese un 4
     while True:
-        print("\nBÚSQUEDA DE PACIENTES")
-        print("\n1. Buscar por Nombre (parcial o completo)")
+        print("\n=== BÚSQUEDA DE PACIENTES ===")
+        print("1. Buscar por Nombre (parcial o completo)")
         print("2. Buscar por ID")
         print("3. Buscar por Diagnóstico")
         print("4. Volver al menú principal")

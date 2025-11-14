@@ -10,6 +10,34 @@ def actualizar_paciente(pacientes):
         print("No hay pacientes registrados")
         return
 
+        #  CAMBIO: Bucle para reintentar si el ID no existe
+    while True:
+        # Validar que el usuario ingrese un número
+        try:
+            id_buscar = int(input("Ingrese el id del paciente: "))
+        except ValueError:
+            print(" Por favor ingrese un número válido")
+            continue  # Volver a preguntar
+
+        # Buscar el paciente
+        paciente_encontrado = None
+        for paciente in pacientes:
+            if paciente["ID"] == id_buscar:
+                paciente_encontrado = paciente
+                break
+
+        # si no existe el paciente
+        if paciente_encontrado == None:
+            print(f"No se encontró paciente con ID: {id_buscar}")
+            # Preguntar si quiere intentar de nuevo
+            reintentar = input("¿Desea intentar con otro ID? (s/n): ").lower()
+            if reintentar != 's':
+                return  # Salir de la función
+            # Si responde 's', el bucle while continúa
+        else:
+            #  Si encontró el paciente, salir del bucle
+            break
+
     # pedir el id del paciente
     id_buscar = int(input("Ingrese el id del paciente: "))
 

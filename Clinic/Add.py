@@ -1,7 +1,15 @@
-import uuid
-import re
+# Modulo para ingresar pacientes
+# Autor: [ Jhon Stiven Zuluaga Jaramillo. ]
+
+import uuid  # importa, a nuestro archivo .py, la herramienta uuid.
+import re  # impotar, a nuestro archivo .py, la herramienta re.
+
+# lista, en la que se van a guardar los pacientes.
 
 pacientes = []
+
+
+# Funcion, que pregunta numero entero y lo valida.
 
 def perdir_numero_entero(mensaje):
     while True:
@@ -13,6 +21,9 @@ def perdir_numero_entero(mensaje):
                 return valor
         except ValueError:
             print("Ingresa un número válido.")
+
+
+# Funcion, que pregunta y valida textos cortos como nombres.
 
 def pedir_texto(pregunta):
     caracteres = re.compile(r"^[A-Za-zÁÉÍÓÚáéíóúÑñ\s\.\'\-]+$")
@@ -26,36 +37,48 @@ def pedir_texto(pregunta):
             texto = texto.title()
             return texto
         else:
-            print("Eso no parece un nombre válido. Usa solo letras o espacios.")
+            print(" Eso no parece un nombre válido. Usa solo letras o espacios.")
+
+
+# Funcion, que pregunta y valida. lo que ingresas, sea una de las dos opciones.
 
 def pedir_genero():
     while True:
-        genero = input("¿Es Masculino o Femenino? ").strip().lower()
-        if genero in ("masculino", "femenino"):
+        genero = input("¿Es Masculino o Femenino? m / f ").strip().lower()
+        if genero in ("masculino", "femenino", "m", "f"):
             return genero.capitalize()
         else:
-            print("Debes escribir 'masculino' - 'femenino'")
+            print(" Debes escribir 'masculino' - 'femenino'. m/f . ")
+
+
+# Funcion, que pregunta y valida, mucho texto como: un diagnostico.
 
 def pedir_texto_largo(pregunta):
     caracteres = re.compile(r"^[0-9A-Za-zÁÉÍÓÚáéíóúÑñ\s\.\'\-]+$")
     while True:
         mucho_texto = input(pregunta).strip()
         if mucho_texto == "":
-            print(" my bro, eso no sirve. ")
+            print(" Tienes que poner algo. ")
             continue
         if caracteres.fullmatch(mucho_texto):
             mucho_texto = " ".join(mucho_texto.split())
             return mucho_texto
         else:
-            print("Ingresa un texto válido.")
+            print(" Ingresa un texto válido.")
+
+
+# En esta funcion, se integran, todas las anteriores funciones, para pregunta e ingrezar,
+# los datos del pasiente, a un diccionario y luego este mismo, a una lista.
 
 def ingresar_paciente():
     ID = int(str(uuid.uuid4().int)[:3])  # Genera un ID de diez números.
-    nombre_completo = pedir_texto("Ingresa el nombre completo del paciente: ").title()
+    nombre_completo = pedir_texto(" Ingresa el nombre completo del paciente: ").capitalize()
     genero = pedir_genero()
-    diagnostico = pedir_texto_largo("¿Cuál es el diagnóstico del paciente?: ").capitalize()
-    historial = pedir_texto_largo("¿Cuál es el historial del paciente?: ").capitalize()
-    edad = perdir_numero_entero("Ingresa la edad del paciente: ")
+    diagnostico = pedir_texto_largo(" ¿Cuál es el diagnóstico del paciente?: ").capitalize()
+    historial = pedir_texto_largo(" ¿Cuál es el historial del paciente?: ").capitalize()
+    edad = perdir_numero_entero(" Ingresa la edad del paciente: ")
+
+    # Combierte, el historial, del diccionario en una lista.
 
     historial = [historial] if historial else []
 
@@ -67,6 +90,7 @@ def ingresar_paciente():
         "Historial": historial,
         "Edad": edad
     }
+    # Guarda los diccionarios, en una lista.
 
     pacientes.append(diccionario)
     print("Paciente ingresado correctamente:")
