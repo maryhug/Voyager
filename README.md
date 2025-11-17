@@ -1,6 +1,6 @@
 # Taller: Sistema de Gestión de Pacientes — “ClinicManager”
 
-## 👥 Integrantes del Proyecto
+## Integrantes del Proyecto
 
 | Integrante | Funcionalidad Principal | Descripción del Aporte |
 |-------------|--------------------------|-------------------------|
@@ -33,3 +33,37 @@
 | `.split()`               | Divide una cadena en una lista según un separador.                              | Procesar texto en partes.                              | `"Ana,Luis".split(",")` → `["Ana","Luis"]` |
 | `re.fullmatch()`         | Comprueba si toda la cadena cumple un patrón regex.                             | Validar formato completo (ej: nombres, correos).       | `re.fullmatch(r"[A-Za-z]+", "Maria")` |
 | `re.compile()`           | Compila un patrón regex para reutilizarlo varias veces.                         | Optimizar validaciones repetitivas.                    | `patron = re.compile(r"\d+")` |
+
+
+## Estructura y archivos importantes del proyecto
+
+### `.idea/`
+Carpeta generada automáticamente por **PyCharm**. Contiene configuraciones locales del proyecto como:
+- Ajustes del editor
+- Configuración del intérprete
+- Preferencias personales del IDE
+
+Estas configuraciones son específicas de tu entorno de trabajo, por lo que **no deben subirse al repositorio**. Por eso se incluyen en el `.gitignore`.
+
+---
+
+### `README.md`
+Archivo que funciona como la **documentación principal del proyecto**. Aquí se describe:
+- Objetivo del proyecto
+- Cómo instalarlo y usarlo
+- Requisitos
+- Ejemplos de uso
+- Integrantes o créditos
+
+Es lo primero que ven otras personas cuando visitan el repositorio, por lo que ayuda a entender y usar el proyecto rápidamente.
+
+---
+
+### `.gitignore`
+Archivo que le indica a Git qué elementos deben **ser ignorados y no subir al repositorio**. Suele incluir:
+- `__pycache__/` (archivos generados automáticamente por Python)
+- `.idea/` (configuraciones del IDE)
+- Carpetas de entornos virtuales (`venv/`, `env/`)
+- Archivos temporales del sistema
+
+Esto ayuda a mantener el repositorio limpio, organizado y sin archivos innecesarios.
